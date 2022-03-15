@@ -1,0 +1,81 @@
+.education-promo {
+  padding: 40px 0;
+
+  .swiper-slide {
+    min-height: 494px;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &.swiper-slide--1 {
+      background-image: url("../img/promo-slider-1.jpg");
+    }
+
+    &.swiper-slide--2 {
+      background-image: url("../img/promo-slider-2.jpg");
+    }
+  }
+
+  .promo-swiper-pagination {
+    position: absolute;
+    z-index: 10;
+    line-height: 8px;
+    font-size: 0;
+    display: inline-block;
+    width: auto;
+    height: 8px;
+    bottom: 36px;
+    right: 30px;
+    left: auto;
+
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $primary;
+    }
+  }
+}
+
+.education-promo__content {
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.education-promo__text-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 10;
+  max-width: 586px;
+  padding: 80px 0 50px 80px;
+}
+
+.education-promo__title {
+  @include font(18px, 22px, 500);
+  margin: 0 0 24px;
+}
+
+.education-promo__slogan {
+  @include font(40px, 48px, 500);
+  display: block;
+  margin: 0 0 16px;
+}
+
+.education-promo__desc {
+  @include font(16px, 24px);
+  margin: 0 0 24px;
+}
+
+.education-promo__login-btn {
+  width: 100%;
+  max-width: 266px;
+}
