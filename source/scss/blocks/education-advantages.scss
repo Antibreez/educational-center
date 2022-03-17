@@ -1,0 +1,37 @@
+.education-advantages {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.education-advantages__title {
+  margin: 0 0 24px;
+}
+
+.education-advantages__desc {
+  @include font(16px, 24px, 400, $text-minor);
+  margin: 0 0 40px;
+}
+
+.education-advantages__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.education-advantages__item {
+  padding: 28px;
+  width: calc((100% - 48px) / 3);
+  background-color: $bg;
+  border-radius: 5px;
+}
+
+.education-advantages__item-title {
+  @include font(24px, 28px, 500, $text-main);
+  margin: 0 0 14px;
+}
+
+.education-advantages__item-desc {
+  @include font(14px, 21px, 400, $text-minor);
+  margin: 0;
+}

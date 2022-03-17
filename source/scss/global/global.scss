@@ -36,3 +36,8 @@ body {
     padding: 0 $mobile-gap;
   }
 }
+
+.section-title {
+  @include font(32px, 38px, 500, $text-main);
+  margin: 0;
+}

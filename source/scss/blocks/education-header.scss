@@ -1,6 +1,17 @@
 .education-header {
   border-bottom: 1px solid #d1d8e1;
   border-top: 1px solid #d1d8e1;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.03);
+    background-color: #fff;
+    border-bottom: none;
+    z-index: 5;
+  }
 }
 
 .education-header__content {

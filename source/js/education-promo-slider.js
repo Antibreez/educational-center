@@ -9,7 +9,7 @@ const swiper = new Swiper(".education-promo__slider", {
   },
 
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: false,
   },
 });
