@@ -21,9 +21,6 @@ img {
 }
 
 body {
-  font-family: $font;
-  font-weight: 400;
-
   &.js-no-scroll {
     overflow: hidden;
   }

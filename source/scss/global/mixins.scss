@@ -1,14 +1,14 @@
-// ШРИФТЫ
-@mixin font-face($name, $filename, $weight, $style: normal) {
-  @font-face {
-    font-family: $name;
-    font-weight: $weight;
-    font-style: $style;
-    font-display: swap;
-    src: local(""), url("../fonts/" + $filename + ".woff") format("woff"),
-      url("../fonts/" + $filename + ".woff2") format("woff2");
-  }
-}
+// // ШРИФТЫ
+// @mixin font-face($name, $filename, $weight, $style: normal) {
+//   @font-face {
+//     font-family: $name;
+//     font-weight: $weight;
+//     font-style: $style;
+//     font-display: swap;
+//     src: local(""), url("../fonts/" + $filename + ".woff") format("woff"),
+//       url("../fonts/" + $filename + ".woff2") format("woff2");
+//   }
+// }
 
 //Разрешения
 @mixin tablet {

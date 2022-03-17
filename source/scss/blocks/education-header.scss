@@ -1,5 +1,6 @@
 .education-header {
   border-bottom: 1px solid #d1d8e1;
+  border-top: 1px solid #d1d8e1;
 }
 
 .education-header__content {
@@ -37,6 +38,6 @@
   transition: color 0.2s;
 
   &:hover {
-    color: $text-main;
+    color: $primary;
   }
 }
