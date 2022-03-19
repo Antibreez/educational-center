@@ -35,3 +35,51 @@
   @include font(14px, 21px, 400, $text-minor);
   margin: 0;
 }
+
+.education-advantages__mobile {
+  display: none;
+}
+
+@include tablet {
+  .education-advantages__list {
+    flex-direction: column;
+  }
+
+  .education-advantages__item {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin: 0 0 24px;
+    }
+  }
+}
+
+@include mobile {
+  .education-advantages__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .education-advantages__content {
+    & > *:not(.education-advantages__mobile) {
+      width: calc(100% - 36px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .education-advantages__list {
+    display: none;
+  }
+
+  .education-advantages__mobile {
+    display: block;
+
+    .education-advantages__item {
+      width: calc(100% - 36px);
+      margin: 0 4px;
+      // align-self: stretch;
+      height: auto;
+    }
+  }
+}

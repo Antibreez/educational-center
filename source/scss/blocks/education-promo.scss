@@ -79,3 +79,59 @@
   width: 100%;
   max-width: 266px;
 }
+
+@include mobile {
+  .education-promo {
+    padding: 0 0 40px 0;
+
+    .swiper-slide {
+      min-height: 458px;
+
+      &.swiper-slide--1 {
+        background-image: url("../img/promo-slider-1-mobile.jpg");
+      }
+
+      &.swiper-slide--2 {
+        background-image: url("../img/promo-slider-2-mobile.jpg");
+      }
+    }
+
+    .promo-swiper-pagination {
+      display: none;
+    }
+  }
+
+  .education-promo__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .education-promo__content {
+    border-radius: 0;
+  }
+
+  .education-promo__text-block {
+    padding: 40px 18px;
+    max-width: none;
+    width: 100%;
+  }
+
+  .education-promo__title {
+    @include font(16px, 19px, 500);
+    margin: 0 0 16px;
+  }
+
+  .education-promo__slogan {
+    @include font(24px, 29px, 500);
+    margin: 0 0 16px;
+  }
+
+  .education-promo__desc {
+    display: none;
+  }
+
+  .education-promo__login-btn {
+    width: 100%;
+    max-width: none;
+  }
+}

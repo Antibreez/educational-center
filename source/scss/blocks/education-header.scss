@@ -45,10 +45,53 @@
 }
 
 .education-header__nav-link {
+  display: block;
   @include font(14px, 21px, 400, $text-minor);
   transition: color 0.2s;
 
   &:hover {
     color: $primary;
+  }
+
+  .icon {
+    display: none;
+    width: 36px;
+    height: 36px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &.icon--programs {
+      background-image: url("../img/book.svg");
+    }
+
+    &.icon--events {
+      background-image: url("../img/calendar.svg");
+    }
+  }
+}
+
+@include tablet {
+  .education-header {
+    border-top: none;
+  }
+
+  .education-header__nav-link {
+    .icon {
+      display: block;
+    }
+
+    .text {
+      display: none;
+    }
+  }
+
+  .education-header__nav {
+    margin-left: auto;
+  }
+
+  .education-header__nav-item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
   }
 }

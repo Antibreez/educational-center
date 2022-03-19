@@ -53,3 +53,20 @@
     transform: rotate(0);
   }
 }
+
+.btn-large {
+  display: block;
+  padding: 29px;
+  width: 100%;
+  @include font(16px, 23px, 500, $text-main);
+  background-color: #fff;
+  border: 1px solid #d1d8e1;
+  border-radius: 5px;
+  transition: all 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    color: $primary-dark;
+    border-color: $primary-dark;
+  }
+}

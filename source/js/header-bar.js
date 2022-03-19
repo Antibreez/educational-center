@@ -1,12 +1,19 @@
 const $topBar = $(".wrap-header-top");
 const $bottomBar = $(".header-bottom");
+
+const $topBarMobile = $(".header-mobile");
+const $bottomBarMobile = $(".header-mobile-search");
+
 const $bar = $(".education-header");
 const $nextEl = $bar.next();
 
 const isScrolled = () => {
-  return (
-    $(window).scrollTop() > $topBar.outerHeight() + $bottomBar.outerHeight()
-  );
+  const scroll =
+    $(window).width() < 1025
+      ? $topBarMobile.outerHeight() + $bottomBarMobile.outerHeight()
+      : $topBar.outerHeight() + $bottomBar.outerHeight();
+
+  return $(window).scrollTop() > scroll;
 };
 
 const addSpace = () => {
@@ -29,3 +36,7 @@ $(window).on("scroll", () => {
     $bar.removeClass("fixed") &&
     removeSpace();
 });
+
+$bar.length > 0 &&
+  $bottomBar.addClass("header-bottom--education") &&
+  $topBarMobile.addClass("header-mobile--education");

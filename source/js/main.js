@@ -1,3 +1,4 @@
 import "./education-promo-slider";
 import "./header-bar";
-import "./education-programs";
+import "./categories";
+import "./advantages";
