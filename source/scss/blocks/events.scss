@@ -32,6 +32,10 @@
   display: flex;
   border: 2px solid $bg;
   border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .events__card-info {

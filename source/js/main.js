@@ -1,3 +1,5 @@
+import "./modal";
+
 import "./education-promo-slider";
 import "./header-bar";
 import "./categories";

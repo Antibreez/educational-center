@@ -48,6 +48,7 @@
 }
 
 .education-contact-us__bottom {
+  width: 100%;
   padding-top: 9px;
   display: flex;
   flex-wrap: wrap;
@@ -63,6 +64,7 @@
 
 .education-contact-us__send {
   width: calc((100% - 16px) / 2);
+  margin-left: auto;
 }
 
 @include tablet {
