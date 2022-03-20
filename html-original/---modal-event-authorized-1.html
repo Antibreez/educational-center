@@ -62,82 +62,16 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <title>Учебный центр</title>
   </head>
-  <body>
+  <body class="js-no-scroll">
     <header class="wrap-header">
       <div class="wrap-header-top">
         <div class="header-top">
-          <div class="header-city" data-dropdown-menu>
-            <a
-              class="header-city__link has--arrow"
-              href="#city-choose"
-              data-fancybox
-              >Волгоград</a
-            >
-            <!-- лучше переместить вних или ajax-->
-            <div class="wrap-popup-pane wrap-popup-pane_city" id="city-choose">
-              <div class="popup-pane popup-pane_city">
-                <div class="popup-pane__title">Выбор города</div>
-                <div class="popup-pane__body">
-                  <div class="popup-city">
-                    <div class="popup-city__text">
-                      Текст с сообщением об автоматическом определении города
-                    </div>
-                    <div class="popup-city__search">
-                      <div class="field-select2">
-                        <div class="field-select2-label">Ваш город:</div>
-                        <select
-                          class="js-select-init"
-                          style="width: 100%"
-                          data-type="searchpopup"
-                          data-dropdown-class="is--in-popup"
-                        >
-                          <option>Волгоград</option>
-                          <option>Москва</option>
-                          <option>Казань</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="popup-city__footer">
-                      <a class="btn" href="#">Ок</a>
-                    </div>
-                    <!--.popup-city-row-->
-                    <!--    .popup-city_col-->
-                    <!--        ul.popup-city-list-->
-                    <!--            li #[a(href="#") Астрахань]-->
-                    <!--            li #[a(href="#") Владивосток]-->
-                    <!--            li #[a(href="#") Волгоград]-->
-                    <!--            li #[a(href="#") Воронеж]-->
-                    <!--            li #[a(href="#") Екатеринбург]-->
-                    <!--            li #[a(href="#") Иркутск]-->
-                    <!--            li #[a(href="#") Казань]-->
-                    <!--            li #[a(href="#") Калининград]-->
-                    <!---->
-                    <!--    .popup-city_col-->
-                    <!--        ul.popup-city-list-->
-                    <!--            li #[a(href="#") Краснодар]-->
-                    <!--            li #[a(href="#") Нижний Новгород]-->
-                    <!--            li #[a(href="#") Новосибирск]-->
-                    <!--            li #[a(href="#") Омск]-->
-                    <!--            li #[a(href="#") Ростов-на-Дону]-->
-                    <!--            li #[a(href="#") Санкт-Петербург]-->
-                    <!--            li #[a(href="#") Симферополь]-->
-                    <!--            li #[a(href="#") Красноярск]-->
-                    <!---->
-                    <!--    .popup-city_col-->
-                    <!--        ul.popup-city-list-->
-                    <!--            li #[a(href="#") Москва]-->
-                    <!--            li #[a(href="#") Минск]-->
-                    <!--            li #[a(href="#") Сочи]-->
-                    <!--            li #[a(href="#") Тольятти]-->
-                    <!--            li #[a(href="#") Уфа]-->
-                    <!--            li #[a(href="#") Хабаровск]-->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="header-city"><span>Волгоград</span></div>
           <div class="wrap-header-top-nav">
             <ul class="header-top-nav">
+              <li class="header-top-nav__item">
+                <a class="header-top-nav__link" href="#">Акции</a>
+              </li>
               <li class="header-top-nav__item">
                 <a class="header-top-nav__link" href="#">Новости</a>
               </li>
@@ -191,7 +125,50 @@
             </div>
           </div>
           <div class="header-toolbar">
-            <a class="btn btn_small btn_fluide" href="#">Войти</a>
+            <div class="header-favorite">
+              <a class="header-favorite__link" href="#"
+                ><i class="ico-favorite">
+                  <svg class="ico-svg">
+                    <use xlink:href="#ico-favorites"></use></svg
+                  ><span class="header-cart__count">3</span></i
+                ><span>Избранное</span></a
+              >
+            </div>
+            <div class="header-cart">
+              <a class="header-cart__link" href="#"
+                ><span class="ico-cart">
+                  <svg class="ico-svg">
+                    <use xlink:href="#ico-h-cart"></use></svg
+                  ><span class="header-cart__count">3</span></span
+                ><span class="header-cart__title">Корзина</span></a
+              >
+            </div>
+            <div class="wrap-header-login">
+              <div class="header-login">
+                <a
+                  class="header-login__link has--arrow js--open-tooltip"
+                  href="#"
+                  data-tooltip-id="personal-dropdown"
+                  data-position="bottom-end"
+                  >Мой кабинет</a
+                >
+                <div class="is--hidden" id="personal-dropdown">
+                  <div
+                    class="dropdown-menu-dropdown dropdown-menu-dropdown_personal"
+                  >
+                    <ul class="dropdown-menu-list">
+                      <li><a href="#">Первый пункт меню</a></li>
+                      <li><a href="#">Сначала дорогие</a></li>
+                      <li>
+                        <a href="#">Второй пункт меню размером в две строчки</a>
+                      </li>
+                      <li><a href="#">Третий пункт меню</a></li>
+                      <li><a href="#">Выход</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="wrap-main-nav">
@@ -550,6 +527,101 @@
             >
           </div>
         </div>
+        <ul class="mobile-personal-nav-list">
+          <li class="mobile-personal-nav-list__item">
+            <a class="mobile-personal-nav-list__link" href="#"
+              ><span class="ico-personal-nav">
+                <svg class="ico-svg">
+                  <use xlink:href="#ico-home"></use></svg></span
+              ><span class="mobile-personal-nav-list__text">Дашборд</span></a
+            >
+          </li>
+          <li class="mobile-personal-nav-list__item">
+            <a class="mobile-personal-nav-list__link" href="#"
+              ><span class="ico-personal-nav">
+                <svg class="ico-svg">
+                  <use xlink:href="#ico-box"></use></svg></span
+              ><span class="mobile-personal-nav-list__text">Заказы</span></a
+            >
+          </li>
+          <li class="mobile-personal-nav-list__item">
+            <a class="mobile-personal-nav-list__link" href="#"
+              ><span class="ico-personal-nav">
+                <svg class="ico-svg">
+                  <use xlink:href="#ico-percent"></use></svg></span
+              ><span class="mobile-personal-nav-list__text"
+                >Мои скидки и закупки</span
+              ></a
+            >
+          </li>
+          <li class="mobile-personal-nav-list__item">
+            <a class="mobile-personal-nav-list__link" href="#"
+              ><span class="ico-personal-nav">
+                <svg class="ico-svg">
+                  <use xlink:href="#ico-favorites-nav"></use></svg></span
+              ><span class="mobile-personal-nav-list__text">Избранное</span></a
+            >
+          </li>
+          <li class="mobile-personal-nav-list__item">
+            <a class="mobile-personal-nav-list__link" href="#"
+              ><span class="ico-personal-nav">
+                <svg class="ico-svg">
+                  <use xlink:href="#ico-account"></use></svg></span
+              ><span class="mobile-personal-nav-list__text"
+                >Управление пользователями дилера</span
+              ></a
+            >
+          </li>
+          <li class="mobile-personal-nav-list__item">
+            <a class="mobile-personal-nav-list__link" href="#"
+              ><span class="ico-personal-nav">
+                <svg class="ico-svg">
+                  <use xlink:href="#ico-move"></use></svg></span
+              ><span class="mobile-personal-nav-list__text"
+                >Взаиморасчёты</span
+              ></a
+            >
+          </li>
+          <li class="mobile-personal-nav-list__item">
+            <a class="mobile-personal-nav-list__link" href="#"
+              ><span class="ico-personal-nav">
+                <svg class="ico-svg">
+                  <use xlink:href="#ico-file"></use></svg></span
+              ><span class="mobile-personal-nav-list__text"
+                >Список плательщиков</span
+              ></a
+            >
+          </li>
+          <li class="mobile-personal-nav-list__item">
+            <a class="mobile-personal-nav-list__link" href="#"
+              ><span class="ico-personal-nav">
+                <svg class="ico-svg">
+                  <use xlink:href="#ico-truck"></use></svg></span
+              ><span class="mobile-personal-nav-list__text">Доставка</span></a
+            >
+          </li>
+          <li class="mobile-personal-nav-list__item">
+            <a class="mobile-personal-nav-list__link" href="#"
+              ><span class="ico-personal-nav">
+                <svg class="ico-svg">
+                  <use xlink:href="#ico-madal"></use></svg></span
+              ><span class="mobile-personal-nav-list__text"
+                >Технико-коммерческие предложения</span
+              ></a
+            >
+          </li>
+          <li class="mobile-personal-nav-list__item">
+            <a class="mobile-personal-nav-list__link" href="#"
+              ><span class="ico-personal-nav">
+                <svg class="ico-svg">
+                  <use xlink:href="#ico-view-grid"></use></svg></span
+              ><span class="mobile-personal-nav-list__text"
+                >Дополнительно</span
+              ></a
+            >
+          </li>
+        </ul>
+        <div class="mobile-menu-devider"></div>
         <ul class="mobile-nav mobile-nav_gray">
           <li class="mobile-nav__item">
             <a class="mobile-nav__link" href="#">Акции</a>
@@ -570,7 +642,7 @@
         <div class="mobile-menu-devider"></div>
         <ul class="mobile-nav">
           <li class="mobile-nav__item">
-            <a class="mobile-nav__link" href="#">Личный кабинет</a>
+            <a class="mobile-nav__link" href="#">Выход</a>
           </li>
         </ul>
       </div>
@@ -612,36 +684,46 @@
                   <!-- Картинка для мобилок -->
                   <source
                     media="(max-width: 767px)"
-                    srcset="img/promo-slider-1-mobile.jpg"
+                    srcset="img/promo-slider-2-mobile.jpg"
                   />
                   <!-- Картинка для десктопа -->
-                  <img src="img/promo-slider-1.jpg" alt="Slide" />
+                  <img src="img/promo-slider-2.jpg" alt="Slide" />
                 </picture>
+                <div class="education-promo__text-block">
+                  <h1 class="education-promo__title">Программа обучения</h1>
+                  <b class="education-promo__slogan">VRV/VRF системы</b>
+                  <p class="education-promo__desc">
+                    Проектирование систем. Водная система VRV/VRF. Типы систем
+                    VRV/VRF. Особенности проектирования систем для высотных
+                    зданий. Опыт проектирования объектов Даичи.
+                  </p>
+                  <a href="#" class="education-promo__login-btn button">
+                    Подробнее о курсе
+                  </a>
+                </div>
               </div>
               <div class="swiper-slide">
                 <picture>
                   <!-- Картинка для мобилок -->
                   <source
                     media="(max-width: 767px)"
-                    srcset="img/promo-slider-2-mobile.jpg"
+                    srcset="img/promo-slider-1-mobile.jpg"
                   />
                   <!-- Картинка для десктопа -->
-                  <img src="img/promo-slider-2.jpg" alt="Slide" />
+                  <img src="img/promo-slider-1.jpg" alt="Slide" />
                 </picture>
+                <div class="education-promo__text-block">
+                  <h1 class="education-promo__title">Программа обучения</h1>
+                  <b class="education-promo__slogan"> Программа </b>
+                  <p class="education-promo__desc">Тема. Тема. Тема.</p>
+                  <a href="#" class="education-promo__login-btn button">
+                    Подробнее о курсе
+                  </a>
+                </div>
               </div>
             </div>
           </div>
           <div class="promo-swiper-pagination"></div>
-          <div class="education-promo__text-block">
-            <h1 class="education-promo__title">Daichi учебный центр</h1>
-            <b class="education-promo__slogan">Станьте экспертом климата!</b>
-            <p class="education-promo__desc">
-              Учитесь дистанционно, где и когда вам удобно.<br />
-              Выберите обучающий модуль по интересующей теме в&nbsp;сфере
-              климата и&nbsp;присоединяйтесь к&nbsp;нашим вебинарам.
-            </p>
-            <a href="" class="education-promo__login-btn button">Войти</a>
-          </div>
         </div>
       </div>
     </div>
@@ -1390,54 +1472,16 @@
           <div class="education-contact-us__form-block">
             <form action="">
               <div class="education-contact-us__form-inner">
-                <div class="field field_error">
-                  <label for="">Имя*</label>
+                <div class="field">
                   <span class="wrap-field-input">
-                    <input
-                      class="field-input"
-                      type="text"
-                      placeholder="Иван Иванов"
-                      required
-                    />
-                    <span class="field-tips_error">
-                      Поле не должно быть пустым
-                    </span>
-                  </span>
-                </div>
-                <div class="field field_error">
-                  <label for="">Email*</label>
-                  <span class="wrap-field-input">
-                    <input
-                      class="field-input"
-                      type="email"
-                      placeholder="user@daichi.ru"
-                      required
-                    />
-                    <span class="field-tips_error">
-                      Введите корректный email
-                    </span>
-                  </span>
-                </div>
-                <div class="field field_error">
-                  <label for="">Номер телефона*</label>
-                  <span class="wrap-field-input">
-                    <input
-                      class="field-input"
-                      type="text"
-                      placeholder="+7 (000) 000-00-00"
-                      required
-                    />
-                    <span class="field-tips_error">
-                      Введите номер телефона
-                    </span>
+                    <label for="">Ваш вопрос</label>
+                    <textarea
+                      class="field-input-textarea"
+                      placeholder="Начните печатать ваш вопрос..."
+                    ></textarea>
                   </span>
                 </div>
                 <div class="education-contact-us__bottom">
-                  <p class="education-contact-us__agreement">
-                    Нажимая на кнопку, я соглашаюсь на
-                    <a href="#">обработку персональных данных</a> и
-                    <a href="#">условия работы на портале</a>
-                  </p>
                   <button class="education-contact-us__send button">
                     Отправить
                   </button>
@@ -1451,7 +1495,7 @@
 
     <section
       id="event-modal"
-      class="modal modal-event"
+      class="modal modal-event js-show"
       data-modal="modal-event"
     >
       <div class="modal__overlay">
@@ -1489,10 +1533,10 @@
             </div>
             <div class="modal-event__bottom">
               <span class="modal-event__bottom-text">
-                Чтобы зарегистрироваться на событие, войдите в свою учетную
-                запись на портале Daichi.business.
+                Нажмите кнопку, чтобы зарегистрироваться на событие и
+                подписаться на программу обучения
               </span>
-              <a href="#" class="modal-event__bottom-btn button">Войти</a>
+              <a href="#" class="modal-event__bottom-btn button">Отслеживать</a>
             </div>
           </form>
         </div>
