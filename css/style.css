@@ -2114,6 +2114,15 @@ body.js-no-scroll {
   color: #6c7684;
   margin: 0; }
 
+.events.events--past .events__card {
+  background-color: #f4f4f8; }
+
+.events.events--past .events__card-time,
+.events.events--past .events__card-title,
+.events.events--past .events__card-person-name,
+.events.events--past .events__date-title {
+  color: #6c7684; }
+
 @media (max-width: 1024px) {
   .events__card {
     -webkit-box-orient: vertical;
@@ -2182,6 +2191,47 @@ body.js-no-scroll {
         -ms-flex-order: 2;
             order: 2;
     margin: 0 0 24px; } }
+
+.lk-education__title-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 30px; }
+
+.lk-education__title {
+  font-size: 32px;
+  line-height: 37px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0; }
+
+.lk-education__main-link {
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #2858ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .lk-education__main-link:hover {
+    color: #113ee0; }
+  .lk-education__main-link span {
+    display: inline-block; }
+  .lk-education__main-link svg {
+    width: 24px;
+    height: 24px;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
 
 .modal-event__date {
   font-size: 24px;

@@ -16,38 +16,66 @@
     <title>Учебный центр</title>
   </head>
   <body>
-    <style></style>
+    <style>
+      a {
+        display: block;
+      }
+
+      a:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      a span {
+        color: #aaa;
+      }
+    </style>
     <br />
     <br />
     <ul class="container">
       <li>
         <h3>
           <a href="not-authorized.html">
-            Неавторизованный --- not-authorized.html
+            Неавторизованный <br />
+            <span>not-authorized.html</span>
           </a>
-          <br />
           <a
             href="---modal-event-not-authorized.html"
-            style="padding-left: 30px"
+            style="padding-left: 30px; display: block"
           >
-            модалка события, неавторизованный ---
-            ---modal-event-not-authorized.html
+            модалка события, неавторизованный <br />
+            <span>---modal-event-not-authorized.html</span>
           </a>
         </h3>
       </li>
       <hr />
       <li>
         <h3>
-          <a href="authorized.html"> Авторизованный --- authorized.html </a>
-          <br />
-          <a href="---modal-event-authorized-1.html" style="padding-left: 30px">
-            модалка события, aвторизованный, не отслеживается ---
-            ---modal-event-authorized-1.html
+          <a href="authorized.html">
+            Авторизованный <br />
+            <span>authorized.html</span>
           </a>
-          <br />
-          <a href="---modal-event-authorized-2.html" style="padding-left: 30px">
-            модалка события, aвторизованный, отслеживается ---
-            ---modal-event-authorized-2.html
+          <a
+            href="---modal-event-authorized-1.html"
+            style="padding-left: 30px; display: block"
+          >
+            модалка события, aвторизованный, не отслеживается <br />
+            <span>---modal-event-authorized-1.html</span>
+          </a>
+          <a
+            href="---modal-event-authorized-2.html"
+            style="padding-left: 30px; display: block"
+          >
+            модалка события, aвторизованный, отслеживается <br />
+            <span>---modal-event-authorized-2.html</span>
+          </a>
+        </h3>
+      </li>
+      <hr />
+      <li>
+        <h3>
+          <a href="lk-education.html">
+            Личный кабинет <br />
+            <span>lk-education.html</span>
           </a>
         </h3>
       </li>
