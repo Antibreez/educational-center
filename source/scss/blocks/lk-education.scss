@@ -1,0 +1,31 @@
+.lk-education__title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 30px;
+}
+
+.lk-education__title {
+  @include font(32px, 37px, 500, $text-main);
+  margin: 0;
+}
+
+.lk-education__main-link {
+  @include font(15px, 23px, 400, $primary);
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: $primary-dark;
+  }
+
+  span {
+    display: inline-block;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    transform: rotate(90deg);
+  }
+}

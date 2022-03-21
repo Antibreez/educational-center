@@ -139,6 +139,19 @@
   margin: 0;
 }
 
+.events.events--past {
+  .events__card {
+    background-color: $bg;
+  }
+
+  .events__card-time,
+  .events__card-title,
+  .events__card-person-name,
+  .events__date-title {
+    color: $text-minor;
+  }
+}
+
 @include tablet {
   .events__card {
     flex-direction: column;
