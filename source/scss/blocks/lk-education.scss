@@ -12,6 +12,7 @@
 .lk-education__title {
   @include font(32px, 37px, 500, $text-main);
   margin: 0;
+  padding-right: 40px;
 }
 
 .lk-education__main-link {
@@ -43,10 +44,10 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 1px;
+      bottom: 0;
       left: 40px;
       width: calc(100% - 80px);
-      height: 1px;
+      height: 2px;
       background-color: $bg;
     }
   }
@@ -59,7 +60,7 @@
   min-width: 250px;
   text-align: center;
   z-index: 2;
-  border-bottom: 1px solid $bg;
+  border-bottom: 2px solid $bg;
 
   &.active {
     border-bottom: 2px solid $primary;
@@ -71,11 +72,11 @@
   }
 
   &:first-child {
-    margin-left: 40px;
+    margin-left: $desktop-gap;
   }
 
   &:last-child {
-    margin-right: 40px;
+    margin-right: $desktop-gap;
   }
 
   &:hover {
@@ -88,5 +89,36 @@
     &:not(:last-child) {
       margin-right: 0;
     }
+  }
+}
+
+@include mobile {
+  .lk-education__title-block-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lk-education__title {
+    margin: 0 0 20px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .lk-education__tab {
+    padding: 20px 25px;
+    min-width: auto;
+
+    &:first-child {
+      margin-left: $mobile-gap;
+    }
+
+    &:last-child {
+      margin-right: $mobile-gap;
+    }
+  }
+
+  .lk-education__certificates-container {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

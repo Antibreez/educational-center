@@ -5,3 +5,4 @@ import "./header-bar";
 import "./categories";
 import "./advantages";
 import "./lk-tabs";
+import "./certificates-slider";
