@@ -1,8 +1,12 @@
-.lk-education__title-block {
+.lk-education {
+  padding-bottom: 80px;
+}
+
+.lk-education__title-block-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 30px;
+  margin: 0 auto 30px;
 }
 
 .lk-education__title {
@@ -27,5 +31,62 @@
     width: 24px;
     height: 24px;
     transform: rotate(90deg);
+  }
+}
+
+.lk-education__tabs {
+  width: 100%;
+  max-width: $desktop;
+  margin: 0 auto 40px;
+
+  .lk-education__tabs-wrapper {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 1px;
+      left: 40px;
+      width: calc(100% - 80px);
+      height: 1px;
+      background-color: $bg;
+    }
+  }
+}
+
+.lk-education__tab {
+  padding: 29px 34px;
+  @include font(16px, 22px, 500, $text-main);
+  width: max-content;
+  min-width: 250px;
+  text-align: center;
+  z-index: 2;
+  border-bottom: 1px solid $bg;
+
+  &.active {
+    border-bottom: 2px solid $primary;
+    color: $primary;
+  }
+
+  &:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  &:first-child {
+    margin-left: 40px;
+  }
+
+  &:last-child {
+    margin-right: 40px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@include tablet {
+  .lk-education__tab {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
   }
 }

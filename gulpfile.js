@@ -19,13 +19,7 @@ const build = gulp.series(
   exports.clean,
   exports.copy,
   exports.webp,
-  gulp.parallel(
-    exports.styles,
-    exports.html,
-    exports.scripts,
-    exports.rastr,
-    exports.sprite
-  ),
+  gulp.parallel(exports.styles, exports.html, exports.scripts, exports.rastr, exports.sprite)
 );
 
 exports.build = build;
@@ -36,14 +30,6 @@ exports.default = gulp.series(
   exports.clean,
   exports.copy,
   exports.webp,
-  gulp.parallel(
-    exports.styles,
-    exports.html,
-    exports.scripts,
-    exports.rastr,
-    exports.sprite
-  ),
-  gulp.series(
-    exports.server.init,
-    watcher
-  ));
+  gulp.parallel(exports.styles, exports.html, exports.scripts, exports.rastr, exports.sprite),
+  gulp.series(exports.server.init, watcher)
+);
