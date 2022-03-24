@@ -6,3 +6,4 @@ import "./categories";
 import "./advantages";
 import "./lk-tabs";
 import "./certificates-slider";
+import "./filter-slider";

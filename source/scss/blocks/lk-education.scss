@@ -84,6 +84,12 @@
   }
 }
 
+.lk-education__programs {
+  .education-programs__programs-list {
+    padding-top: 0;
+  }
+}
+
 @include tablet {
   .lk-education__tab {
     &:not(:last-child) {
