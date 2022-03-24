@@ -1447,6 +1447,14 @@ body.js-no-scroll {
 .header-mobile.header-mobile--education {
   position: absolute; }
 
+.ico-svg.ico-svg--education {
+  width: 28px;
+  height: 26px;
+  margin-top: -4px; }
+
+.breadcrumbs-title {
+  padding-top: 40px; }
+
 .certificates {
   border: 5px;
   background-color: #f4f4f8;
@@ -2093,6 +2101,21 @@ body.js-no-scroll {
     width: 100%;
     max-width: none; } }
 
+.events-catalog {
+  padding-top: 30px;
+  padding-bottom: 80px; }
+
+.events-catalog__popular {
+  padding-top: 22px; }
+
+.events-catalog__popular-container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.events-catalog__search {
+  margin: 0 0 24px; }
+
 .events__date-list {
   margin: 0;
   padding: 0;
@@ -2320,6 +2343,37 @@ body.js-no-scroll {
             order: 2;
     margin: 0 0 24px; } }
 
+.filter-section--event-subject .filter-section-toggle {
+  max-height: 142px; }
+
+.filter-section--event-brand .filter-section-toggle {
+  max-height: 220px; }
+
+.filter-section--event-category .filter-section-toggle.swiper {
+  max-height: 259px; }
+  .filter-section--event-category .filter-section-toggle.swiper .field {
+    margin: 6px 0; }
+
+.filter-section-toggle.swiper .field {
+  margin: 0; }
+
+.filter-section-toggle.swiper .field-input-radio input[type="checkbox"] + span {
+  line-height: 24px; }
+
+.filter-section-toggle.swiper .field-input-radio input[type="checkbox"] + span::before {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+.filter-scrollbar {
+  background-color: transparent; }
+  .filter-scrollbar .swiper-scrollbar-drag {
+    background-color: #e6e6ef; }
+
+.filter--events-catalog .filter-footer__reset {
+  width: 100%; }
+
 .lk-education {
   padding-bottom: 80px; }
 
@@ -2402,6 +2456,9 @@ body.js-no-scroll {
     margin-right: 40px; }
   .lk-education__tab:hover {
     cursor: pointer; }
+
+.lk-education__programs .education-programs__programs-list {
+  padding-top: 0; }
 
 @media (max-width: 1024px) {
   .lk-education__tab:not(:last-child) {
