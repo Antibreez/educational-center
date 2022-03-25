@@ -35,8 +35,12 @@
   background-color: transparent;
   border: none;
 
-  span:nth-child(2) {
+  span:last-of-type {
     display: none;
+  }
+
+  span:first-child {
+    display: block;
   }
 
   svg {
@@ -54,12 +58,12 @@
 }
 
 .btn-arrow.opened {
-  span:nth-child(2) {
-    display: block;
-  }
-
   span:first-child {
     display: none;
+  }
+
+  span:last-of-type {
+    display: block;
   }
 
   svg {

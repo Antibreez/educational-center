@@ -45,8 +45,34 @@
   }
 }
 
-.filter--events-catalog {
+.filter--events-catalog,
+.filter--programs-catalog {
   .filter-footer__reset {
     width: 100%;
+  }
+}
+
+.filter__mobile-btn {
+  @include font(15px, 18px, 500, $text-main);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+
+  span {
+    padding-top: 3px;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+}
+
+@include tablet {
+  .filter__mobile-btn {
+    display: flex;
   }
 }

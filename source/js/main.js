@@ -7,3 +7,4 @@ import "./advantages";
 import "./lk-tabs";
 import "./certificates-slider";
 import "./filter-slider";
+import "./program-card";
