@@ -130,16 +130,6 @@
 }
 
 @include tablet {
-  .certificates {
-    display: none;
-  }
-
-  .certificates__mobile {
-    padding-bottom: 40px;
-    display: block;
-    position: relative;
-  }
-
   .certificates__mobile-pagination {
     // position: absolute;
     // z-index: 4;
@@ -161,5 +151,17 @@
     .swiper-pagination-bullet-active {
       background-color: $primary;
     }
+  }
+}
+
+@include mobile {
+  .certificates {
+    display: none;
+  }
+
+  .certificates__mobile {
+    padding-bottom: 40px;
+    display: block;
+    position: relative;
   }
 }
