@@ -1,14 +1,14 @@
 import Swiper, { FreeMode } from "swiper";
 
-const $lk = $(".lk-education");
-const $tabs = $(".lk-education__tab");
-const $eventsFuture = ".lk-education__events--future";
-const $eventsPast = ".lk-education__events--past";
-const $certificates = ".lk-education__certificates";
-const $programs = ".lk-education__programs";
+//const $lk = $(".lk-education");
+const $tabs = $(".education-tabs button");
+// const $eventsFuture = ".lk-education__events--future";
+// const $eventsPast = ".lk-education__events--past";
+// const $certificates = ".lk-education__certificates";
+// const $programs = ".lk-education__programs";
 
 function hideAll() {
-  $lk.find("[data-block]").hide();
+  $tabs.first().parents(".education-tabs").parent().find("[data-block]").hide();
 }
 
 function removeActiveClass() {
@@ -25,7 +25,7 @@ $tabs.on("click", (e) => {
 
   const name = $target.attr("data-tab");
   hideAll();
-  $lk.find(`[data-block="${name}"]`).show();
+  $tabs.first().parents(".education-tabs").parent().find(`[data-block="${name}"]`).show();
 });
 
 $(window).on("load", () => {

@@ -6,11 +6,17 @@
   background-color: $primary;
   border: none;
   border-radius: 5px;
+  color: #fff;
   text-align: center;
-  transition: color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
 
-  &:hover {
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:not(:disabled):hover {
     cursor: pointer;
+    color: #fff;
     background-color: $primary-dark;
   }
 }
@@ -21,7 +27,7 @@
   background-color: #fff;
   color: $text-main;
 
-  &:hover {
+  &:not(:disabled):hover {
     color: $primary;
     background-color: #fff;
   }

@@ -1,7 +1,7 @@
 import Swiper, { Mousewheel, FreeMode, Scrollbar } from "swiper";
 
 $(window).on("load", () => {
-  const swiper = new Swiper(".filter-section--event-subject .filter-section-toggle", {
+  const swiper = new Swiper(".filter-section-toggle--event-subject", {
     modules: [Mousewheel, FreeMode, Scrollbar],
 
     mousewheel: {
@@ -19,7 +19,7 @@ $(window).on("load", () => {
     observer: true,
   });
 
-  const swiper2 = new Swiper(".filter-section--event-brand .filter-section-toggle", {
+  const swiper2 = new Swiper(".filter-section-toggle--event-brand", {
     modules: [Mousewheel, FreeMode, Scrollbar],
 
     mousewheel: {
@@ -37,7 +37,7 @@ $(window).on("load", () => {
     observer: true,
   });
 
-  const swiper3 = new Swiper(".filter-section--event-category .filter-section-toggle", {
+  const swiper3 = new Swiper(".filter-section-toggle--event-category", {
     modules: [Mousewheel, FreeMode, Scrollbar],
 
     mousewheel: {

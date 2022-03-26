@@ -7,3 +7,15 @@
 .title-block__btn {
   width: 266px;
 }
+
+@include tablet {
+  .title-block__title-btn {
+    flex-direction: column;
+  }
+}
+
+@include mobile {
+  .title-block__btn {
+    width: 100%;
+  }
+}
