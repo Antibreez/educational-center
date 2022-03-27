@@ -1,4 +1,5 @@
 import "./modal";
+import "./scroll";
 
 import "./education-promo-slider";
 import "./header-bar";
