@@ -40,12 +40,70 @@
     <header class="wrap-header">
       <div class="wrap-header-top">
         <div class="header-top">
-          <div class="header-city"><span>Волгоград</span></div>
+          <div class="header-city" data-dropdown-menu>
+            <a class="header-city__link has--arrow" href="#city-choose" data-fancybox>Волгоград</a>
+            <!-- лучше переместить вних или ajax-->
+            <div class="wrap-popup-pane wrap-popup-pane_city" id="city-choose">
+              <div class="popup-pane popup-pane_city">
+                <div class="popup-pane__title">Выбор города</div>
+                <div class="popup-pane__body">
+                  <div class="popup-city">
+                    <div class="popup-city__text">Текст с сообщением об автоматическом определении города</div>
+                    <div class="popup-city__search">
+                      <div class="field-select2">
+                        <div class="field-select2-label">Ваш город:</div>
+                        <select
+                          class="js-select-init"
+                          style="width: 100%"
+                          data-type="searchpopup"
+                          data-dropdown-class="is--in-popup">
+                          <option>Волгоград</option>
+                          <option>Москва</option>
+                          <option>Казань</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="popup-city__footer">
+                      <a class="btn" href="#">Ок</a>
+                    </div>
+                    <!--.popup-city-row-->
+                    <!--    .popup-city_col-->
+                    <!--        ul.popup-city-list-->
+                    <!--            li #[a(href="#") Астрахань]-->
+                    <!--            li #[a(href="#") Владивосток]-->
+                    <!--            li #[a(href="#") Волгоград]-->
+                    <!--            li #[a(href="#") Воронеж]-->
+                    <!--            li #[a(href="#") Екатеринбург]-->
+                    <!--            li #[a(href="#") Иркутск]-->
+                    <!--            li #[a(href="#") Казань]-->
+                    <!--            li #[a(href="#") Калининград]-->
+                    <!---->
+                    <!--    .popup-city_col-->
+                    <!--        ul.popup-city-list-->
+                    <!--            li #[a(href="#") Краснодар]-->
+                    <!--            li #[a(href="#") Нижний Новгород]-->
+                    <!--            li #[a(href="#") Новосибирск]-->
+                    <!--            li #[a(href="#") Омск]-->
+                    <!--            li #[a(href="#") Ростов-на-Дону]-->
+                    <!--            li #[a(href="#") Санкт-Петербург]-->
+                    <!--            li #[a(href="#") Симферополь]-->
+                    <!--            li #[a(href="#") Красноярск]-->
+                    <!---->
+                    <!--    .popup-city_col-->
+                    <!--        ul.popup-city-list-->
+                    <!--            li #[a(href="#") Москва]-->
+                    <!--            li #[a(href="#") Минск]-->
+                    <!--            li #[a(href="#") Сочи]-->
+                    <!--            li #[a(href="#") Тольятти]-->
+                    <!--            li #[a(href="#") Уфа]-->
+                    <!--            li #[a(href="#") Хабаровск]-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="wrap-header-top-nav">
             <ul class="header-top-nav">
-              <li class="header-top-nav__item">
-                <a class="header-top-nav__link" href="#">Акции</a>
-              </li>
               <li class="header-top-nav__item">
                 <a class="header-top-nav__link" href="#">Новости</a>
               </li>
@@ -93,48 +151,7 @@
             </div>
           </div>
           <div class="header-toolbar">
-            <div class="header-favorite">
-              <a class="header-favorite__link" href="#"
-                ><i class="ico-favorite">
-                  <svg class="ico-svg">
-                    <use xlink:href="#ico-favorites"></use></svg
-                  ><span class="header-cart__count">3</span></i
-                ><span>Избранное</span></a
-              >
-            </div>
-            <div class="header-cart">
-              <a class="header-cart__link" href="#"
-                ><span class="ico-cart">
-                  <svg class="ico-svg">
-                    <use xlink:href="#ico-h-cart"></use></svg
-                  ><span class="header-cart__count">3</span></span
-                ><span class="header-cart__title">Корзина</span></a
-              >
-            </div>
-            <div class="wrap-header-login">
-              <div class="header-login">
-                <a
-                  class="header-login__link has--arrow js--open-tooltip"
-                  href="#"
-                  data-tooltip-id="personal-dropdown"
-                  data-position="bottom-end"
-                  >Мой кабинет</a
-                >
-                <div class="is--hidden" id="personal-dropdown">
-                  <div class="dropdown-menu-dropdown dropdown-menu-dropdown_personal">
-                    <ul class="dropdown-menu-list">
-                      <li><a href="#">Первый пункт меню</a></li>
-                      <li><a href="#">Сначала дорогие</a></li>
-                      <li>
-                        <a href="#">Второй пункт меню размером в две строчки</a>
-                      </li>
-                      <li><a href="#">Третий пункт меню</a></li>
-                      <li><a href="#">Выход</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a class="btn btn_small btn_fluide" href="#">Войти</a>
           </div>
         </div>
         <div class="wrap-main-nav">
@@ -406,89 +423,6 @@
             >
           </div>
         </div>
-        <ul class="mobile-personal-nav-list">
-          <li class="mobile-personal-nav-list__item">
-            <a class="mobile-personal-nav-list__link" href="#"
-              ><span class="ico-personal-nav">
-                <svg class="ico-svg">
-                  <use xlink:href="#ico-home"></use></svg></span
-              ><span class="mobile-personal-nav-list__text">Дашборд</span></a
-            >
-          </li>
-          <li class="mobile-personal-nav-list__item">
-            <a class="mobile-personal-nav-list__link" href="#"
-              ><span class="ico-personal-nav">
-                <svg class="ico-svg">
-                  <use xlink:href="#ico-box"></use></svg></span
-              ><span class="mobile-personal-nav-list__text">Заказы</span></a
-            >
-          </li>
-          <li class="mobile-personal-nav-list__item">
-            <a class="mobile-personal-nav-list__link" href="#"
-              ><span class="ico-personal-nav">
-                <svg class="ico-svg">
-                  <use xlink:href="#ico-percent"></use></svg></span
-              ><span class="mobile-personal-nav-list__text">Мои скидки и закупки</span></a
-            >
-          </li>
-          <li class="mobile-personal-nav-list__item">
-            <a class="mobile-personal-nav-list__link" href="#"
-              ><span class="ico-personal-nav">
-                <svg class="ico-svg">
-                  <use xlink:href="#ico-favorites-nav"></use></svg></span
-              ><span class="mobile-personal-nav-list__text">Избранное</span></a
-            >
-          </li>
-          <li class="mobile-personal-nav-list__item">
-            <a class="mobile-personal-nav-list__link" href="#"
-              ><span class="ico-personal-nav">
-                <svg class="ico-svg">
-                  <use xlink:href="#ico-account"></use></svg></span
-              ><span class="mobile-personal-nav-list__text">Управление пользователями дилера</span></a
-            >
-          </li>
-          <li class="mobile-personal-nav-list__item">
-            <a class="mobile-personal-nav-list__link" href="#"
-              ><span class="ico-personal-nav">
-                <svg class="ico-svg">
-                  <use xlink:href="#ico-move"></use></svg></span
-              ><span class="mobile-personal-nav-list__text">Взаиморасчёты</span></a
-            >
-          </li>
-          <li class="mobile-personal-nav-list__item">
-            <a class="mobile-personal-nav-list__link" href="#"
-              ><span class="ico-personal-nav">
-                <svg class="ico-svg">
-                  <use xlink:href="#ico-file"></use></svg></span
-              ><span class="mobile-personal-nav-list__text">Список плательщиков</span></a
-            >
-          </li>
-          <li class="mobile-personal-nav-list__item">
-            <a class="mobile-personal-nav-list__link" href="#"
-              ><span class="ico-personal-nav">
-                <svg class="ico-svg">
-                  <use xlink:href="#ico-truck"></use></svg></span
-              ><span class="mobile-personal-nav-list__text">Доставка</span></a
-            >
-          </li>
-          <li class="mobile-personal-nav-list__item">
-            <a class="mobile-personal-nav-list__link" href="#"
-              ><span class="ico-personal-nav">
-                <svg class="ico-svg">
-                  <use xlink:href="#ico-madal"></use></svg></span
-              ><span class="mobile-personal-nav-list__text">Технико-коммерческие предложения</span></a
-            >
-          </li>
-          <li class="mobile-personal-nav-list__item">
-            <a class="mobile-personal-nav-list__link" href="#"
-              ><span class="ico-personal-nav">
-                <svg class="ico-svg">
-                  <use xlink:href="#ico-view-grid"></use></svg></span
-              ><span class="mobile-personal-nav-list__text">Дополнительно</span></a
-            >
-          </li>
-        </ul>
-        <div class="mobile-menu-devider"></div>
         <ul class="mobile-nav mobile-nav_gray">
           <li class="mobile-nav__item">
             <a class="mobile-nav__link" href="#">Акции</a>
@@ -509,7 +443,7 @@
         <div class="mobile-menu-devider"></div>
         <ul class="mobile-nav">
           <li class="mobile-nav__item">
-            <a class="mobile-nav__link" href="#">Выход</a>
+            <a class="mobile-nav__link" href="#">Личный кабинет</a>
           </li>
         </ul>
       </div>
@@ -546,685 +480,237 @@
         <div class="wrap-breadcrumbs">
           <ul class="breadcrumbs">
             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">События</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Программы обучения</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">VRV/VRF системы</a></li>
           </ul>
           <div class="breadcrumbs-mobile"><a class="breadcrumbs-mobile__link" href="#">Назад</a></div>
         </div>
-        <h1>События</h1>
+        <div class="title-block__title-btn">
+          <h1>VRV/VRF системы</h1>
+          <a href="#" class="title-block__btn button">Отслеживать</a>
+        </div>
       </div>
     </div>
 
-    <div class="events-catalog__popular">
-      <div class="events-catalog__popular-container">
-        <div class="categories">
-          <div class="categories__item">
-            <h3 class="categories__title">Популярные курсы:</h3>
-            <div class="categories__list-wrap swiper">
-              <ul class="categories__type-list swiper-wrapper">
-                <li class="categories__type swiper-slide">
-                  <button class="categories__type-btn">Для проектировщиков</button>
-                </li>
-                <li class="categories__type swiper-slide">
-                  <button class="categories__type-btn active">Для дилеров</button>
-                </li>
-                <li class="categories__type swiper-slide">
-                  <button class="categories__type-btn">Для монтажников</button>
-                </li>
-                <li class="categories__type swiper-slide">
-                  <button class="categories__type-btn">Kentatsu</button>
-                </li>
-                <li class="categories__type swiper-slide">
-                  <button class="categories__type-btn">Daichi</button>
-                </li>
-                <li class="categories__type swiper-slide">
-                  <button class="categories__type-btn">Облачный кондиционер</button>
+    <div class="program-card__categories">
+      <div class="program-card__categories-container">
+        <div class="categories__list-wrap swiper">
+          <ul class="categories__type-list swiper-wrapper">
+            <li class="categories__type swiper-slide">Kentatsu</li>
+            <li class="categories__type swiper-slide">Daikin</li>
+            <li class="categories__type swiper-slide">Midea</li>
+            <li class="categories__type swiper-slide">Bosch</li>
+            <li class="categories__type swiper-slide">Системы VRV/VRF</li>
+            <li class="categories__type swiper-slide">Для дилеров</li>
+            <li class="categories__type swiper-slide">Для проектировщиков</li>
+            <li class="categories__type swiper-slide">Для технических специалистов</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-card__promo">
+      <div class="program-card__promo-container container">
+        <div class="program-card__promo-img-block">
+          <div class="program-card__promo-img-wrap">
+            <img src="img/program-card.jpg" alt="program" />
+          </div>
+        </div>
+        <div class="program-card__promo-content">
+          <div class="program-card__time-label">
+            <div class="program-card__time-icon">
+              <svg><use xlink:href="img/sprite.svg#clock"></use></svg>
+            </div>
+            До следующего события 1д&nbsp;48ч
+          </div>
+          <h2 class="program-card__promo-title">О чём эта программа обучения?</h2>
+          <div class="program-card__promo-desc overflow-5lines">
+            Преимущества применения VRV Daikin для проектировщика и заказчика. ВРТ, фильтры самоочистки, автозаправка,
+            корректное сравнение энергоэффективности, однопортовые блоки, запуск с загрузкой 10%. Особенности
+            проектирования систем с рекуперацией, в том числе однопортовые блоки для 3-трубных систем. Проектирование
+            невидимых систем VRV.
+          </div>
+          <button type="button" class="program-card__desc-btn btn-arrow">
+            <span>Подробнее</span>
+            <svg><use xlink:href="img/sprite.svg#arrow"></use></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-card__ask-question">
+      <div class="program-card__ask-question-container container">
+        <div class="program-card__ask-question-content">
+          <div class="program-card__ask-question-person events__card-person">
+            <div class="events__card-person-img-block">
+              <img src="img/person-1.jpg" alt="person-1" class="events__card-person-img" />
+            </div>
+            <div class="events__card-person-info">
+              <div class="events__card-person-name">Иван Иванов</div>
+              <div class="events__card-person-role">Глава департамента технического развития Daichi</div>
+            </div>
+          </div>
+          <div class="program-card__ask-question-contact">
+            <span>Email</span>
+            <span>ivanov@daichi.ru</span>
+          </div>
+          <a href="#" class="program-card__ask-question-link button-light">Задать вопрос</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lk-education__tabs education-tabs swiper">
+      <div class="lk-education__tabs-wrapper swiper-wrapper">
+        <button class="lk-education__tab swiper-slide active" data-tab="program-event">События</button>
+        <button class="lk-education__tab swiper-slide" data-tab="program-videos">Видео курса</button>
+        <button class="lk-education__tab swiper-slide" data-tab="program-testing">Тестирование</button>
+        <button class="lk-education__tab swiper-slide" data-tab="program-question">Вопрос по программе</button>
+      </div>
+    </div>
+
+    <div class="program-card__event" data-block="program-event">
+      <div class="program-card__event-container container">
+        <div class="lk-education__events-list events">
+          <ul class="events__date-list">
+            <li class="events__date-item">
+              <h3 class="events__date-title">18 февраля, пятница</h3>
+              <ul class="events__list">
+                <li class="events__item">
+                  <div class="events__card" data-trigger="modal-event">
+                    <div class="events__card-info">
+                      <span class="events__card-time">14:00</span>
+                      <ul class="events__card-audience-list">
+                        <li class="events__card-audience-item">Для дилеров</li>
+                        <li class="events__card-audience-item">Для проектировщиков</li>
+                        <li class="events__card-audience-item">Для технических специалистов</li>
+                      </ul>
+                    </div>
+                    <div class="events__card-subject">
+                      <h4 class="events__card-title">VRV/VRF системы</h4>
+                      <div class="events__card-person-block">
+                        <div class="events__card-person">
+                          <div class="events__card-person-img-block">
+                            <img src="img/person-1.jpg" alt="person-1" class="events__card-person-img" />
+                          </div>
+                          <div class="events__card-person-info">
+                            <div class="events__card-person-name">Иван Иванов</div>
+                            <div class="events__card-person-role">Глава департамента технического развития Daichi</div>
+                          </div>
+                        </div>
+                      </div>
+                      <ul class="events__card-tags">
+                        <li class="events__card-tag">Kentatsu</li>
+                        <li class="events__card-tag">Daikin</li>
+                        <li class="events__card-tag">Midea</li>
+                        <li class="events__card-tag">Bosch</li>
+                        <li class="events__card-tag">Системы VRV/VRF</li>
+                        <li class="events__card-tag">Для дилеров</li>
+                        <li class="events__card-tag">Для проектировщиков</li>
+                        <li class="events__card-tag">Для технических специалистов</li>
+                      </ul>
+                    </div>
+                  </div>
                 </li>
               </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-card__videos" data-block="program-videos" style="display: none">
+      <div class="program-card__videos-container container">
+        <div class="program-card__videos-content">
+          <div class="programs-card__videos-not-auth">
+            <div class="button-message">
+              <span class="button-message__text">
+                Чтобы получить доступ к&nbsp;видео курса, войдите в&nbsp;свою учетную запись на&nbsp;портале
+                Daichi.business.
+              </span>
+              <a href="#" class="button-message__btn button">Войти</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="events-catalog">
-      <div class="events-catalog__container container">
-        <div class="catalog-section">
-          <aside class="catalog-section__aside">
-            <div class="wrap-filter">
-              <!-- <div class="filter-mobile-header">
-                <div class="filter-mobile-header__title">Фильры</div>
-                <div class="filter-mobile-header__close">
-                  <a class="filter-mobile-header__link js--filter-mobile-close" href="#">
-                    <svg class="ico-svg">
-                      <use xlink:href="#ico-close"></use></svg
-                  ></a>
-                </div>
-              </div> -->
-              <div class="filter filter--events-catalog">
-                <div class="filter-section filter-section--event-subject filter-section_open">
-                  <a class="filter-section__title filter-section__title-btn" href="#">Тематика</a>
-                  <div class="filter-section-toggle filter-section-toggle--event-subject swiper">
-                    <div class="filter-section__body swiper-wrapper">
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Для проектировщиков<span class="filter-section__count">168</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Для дилеров<span class="filter-section__count">212</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Для монтажников<span class="filter-section__count">68</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Для проектировщиков<span class="filter-section__count">168</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Для проектировщиков<span class="filter-section__count">168</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Для дилеров<span class="filter-section__count">212</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Для монтажников<span class="filter-section__count">68</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Для проектировщиков<span class="filter-section__count">168</span></span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="filter-scrollbar swiper-scrollbar"></div>
-                  </div>
-                </div>
-                <div class="filter-section filter-section--event-brand filter-section_open">
-                  <a class="filter-section__title filter-section__title-btn" href="#">Бренд</a>
-                  <div class="filter-section-toggle filter-section-toggle--event-brand swiper">
-                    <div class="filter-section__body swiper-wrapper">
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Aurum<span class="filter-section__count">168</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Axioma<span class="filter-section__count">212</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Daichi<span class="filter-section__count">50</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Daikin<span class="filter-section__count">3</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Flaktwoods<span class="filter-section__count">20</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Furst<span class="filter-section__count">2</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Aurum<span class="filter-section__count">168</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Axioma<span class="filter-section__count">212</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Daichi<span class="filter-section__count">50</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Daikin<span class="filter-section__count">3</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Flaktwoods<span class="filter-section__count">20</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Furst<span class="filter-section__count">2</span></span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="filter-scrollbar swiper-scrollbar"></div>
-                  </div>
-                </div>
-                <div class="filter-section filter-section--event-category filter-section_open">
-                  <a class="filter-section__title filter-section__title-btn" href="#">Категория</a>
-                  <div class="filter-section-toggle filter-section-toggle--event-catergory swiper">
-                    <div class="filter-section__body swiper-wrapper">
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Аксессуары для вентиляции<span class="filter-section__count">168</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" checked />
-                          <span>Аксессуары для вентиляции<span class="filter-section__count">168</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Аксессуары для кондиционирования<span class="filter-section__count">212</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Аксессуары для отопления<span class="filter-section__count">50</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Канальное вентиляционное оборудование<span class="filter-section__count">3</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Коммерческие / SKY<span class="filter-section__count">20</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Компактные вентиляционные установки<span class="filter-section__count">2</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Аксессуары для отопления<span class="filter-section__count">50</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Канальное вентиляционное оборудование<span class="filter-section__count">3</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Коммерческие / SKY<span class="filter-section__count">20</span></span>
-                        </label>
-                      </div>
-                      <div class="field swiper-slide">
-                        <label class="field-input-radio">
-                          <input type="checkbox" />
-                          <span>Компактные вентиляционные установки<span class="filter-section__count">2</span></span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="filter-scrollbar swiper-scrollbar"></div>
-                  </div>
-                </div>
-                <div class="filter-footer">
-                  <a class="btn btn_small btn_border btn_border-blue filter-footer__reset" disabled>
-                    Очистить фильтры
-                  </a>
-                </div>
-              </div>
+    <div class="program-card__testing" data-block="program-testing" style="display: none">
+      <div class="program-card__testing-container container">
+        <div class="program-card__testing-content">
+          <div class="program-card__testing-not-auth">
+            <div class="button-message">
+              <span class="button-message__text">
+                Чтобы получить доступ к&nbsp;тестированию, войдите в&nbsp;свою учетную запись на&nbsp;портале
+                Daichi.business.
+              </span>
+              <a href="#" class="button-message__btn button">Войти</a>
             </div>
-          </aside>
-          <section class="catalog-section__main">
-            <button class="catalog-section__filter filter__mobile-btn btn-large" data-trigger="modal-filter">
-              <svg><use xlink:href="img/sprite.svg#filter"></use></svg>
-              <span>Фильтр</span>
-            </button>
-
-            <div class="events-catalog__search">
-              <div class="search-pane">
-                <div class="wrap-search-pane-input">
-                  <input class="search-pane-input" type="text" placeholder="Поиск по названию программы" />
-                  <button class="search-pane-btn">
-                    <span class="ico-search">
-                      <svg class="ico-svg">
-                        <use xlink:href="#ico-search"></use></svg
-                    ></span>
-                  </button>
-                  <button class="search-pane-btn search-pane-btn_clear">
-                    <svg class="ico-svg">
-                      <use xlink:href="#ico-close"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <ul class="events__date-list">
-              <li class="events__date-item">
-                <h3 class="events__date-title">18 февраля, пятница</h3>
-                <ul class="events__list">
-                  <li class="events__item">
-                    <div class="events__card" data-trigger="modal-event">
-                      <div class="events__card-info">
-                        <span class="events__card-time">14:00</span>
-                        <ul class="events__card-audience-list">
-                          <li class="events__card-audience-item">Для дилеров</li>
-                          <li class="events__card-audience-item">Для проектировщиков</li>
-                          <li class="events__card-audience-item">Для технических специалистов</li>
-                        </ul>
-                      </div>
-                      <div class="events__card-subject">
-                        <h4 class="events__card-title">VRV/VRF системы</h4>
-                        <div class="events__card-person-block">
-                          <div class="events__card-person">
-                            <div class="events__card-person-img-block">
-                              <img src="img/person-1.jpg" alt="person-1" class="events__card-person-img" />
-                            </div>
-                            <div class="events__card-person-info">
-                              <div class="events__card-person-name">Иван Иванов</div>
-                              <div class="events__card-person-role">
-                                Глава департамента технического развития Daichi
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <ul class="events__card-tags">
-                          <li class="events__card-tag">Kentatsu</li>
-                          <li class="events__card-tag">Daikin</li>
-                          <li class="events__card-tag">Midea</li>
-                          <li class="events__card-tag">Bosch</li>
-                          <li class="events__card-tag">Системы VRV/VRF</li>
-                          <li class="events__card-tag">Для дилеров</li>
-                          <li class="events__card-tag">Для проектировщиков</li>
-                          <li class="events__card-tag">Для технических специалистов</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="events__item">
-                    <div class="events__card">
-                      <div class="events__card-info">
-                        <span class="events__card-time">18:00</span>
-                        <ul class="events__card-audience-list">
-                          <li class="events__card-audience-item">Для дилеров</li>
-                        </ul>
-                      </div>
-                      <div class="events__card-subject">
-                        <h4 class="events__card-title">Как продавать воздух за деньги?</h4>
-                        <div class="events__card-person-block">
-                          <div class="events__card-person">
-                            <div class="events__card-person-img-block">
-                              <img src="img/person-2.jpg" alt="person-2" class="events__card-person-img" />
-                            </div>
-                            <div class="events__card-person-info">
-                              <div class="events__card-person-name">Семён Семёнов</div>
-                              <div class="events__card-person-role">Антрепрёнер, миллионер</div>
-                            </div>
-                          </div>
-                        </div>
-                        <ul class="events__card-tags">
-                          <li class="events__card-tag">Daikin</li>
-                          <li class="events__card-tag">Kentatsu</li>
-                          <li class="events__card-tag">Daichi</li>
-                          <li class="events__card-tag">Облачный кондиционер</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="events__date-item">
-                <h3 class="events__date-title">21 февраля, понедельник</h3>
-                <ul class="events__list">
-                  <li class="events__item">
-                    <div class="events__card">
-                      <div class="events__card-info">
-                        <span class="events__card-time">10:00</span>
-                        <ul class="events__card-audience-list">
-                          <li class="events__card-audience-item">Для проектировщиков</li>
-                        </ul>
-                      </div>
-                      <div class="events__card-subject">
-                        <h4 class="events__card-title">
-                          На всякого Егорку найдётся своя поговорка. Продаём услуги Daichi.
-                        </h4>
-                        <div class="events__card-person-block">
-                          <div class="events__card-person">
-                            <div class="events__card-person-img-block">
-                              <img src="img/person-3.jpg" alt="person-3" class="events__card-person-img" />
-                            </div>
-                            <div class="events__card-person-info">
-                              <div class="events__card-person-name">Константин Константинов</div>
-                              <div class="events__card-person-role">Человек, который умеет продать ручку</div>
-                            </div>
-                          </div>
-                        </div>
-                        <ul class="events__card-tags">
-                          <li class="events__card-tag">Daichi</li>
-                          <li class="events__card-tag">Климат Онлайн</li>
-                          <li class="events__card-tag">Мобильное управление</li>
-                          <li class="events__card-tag">Мой комфорт</li>
-                          <li class="events__card-tag">Услуги Daichi</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="events__date-item">
-                <h3 class="events__date-title">28 февраля, понедельник</h3>
-                <ul class="events__list">
-                  <li class="events__item">
-                    <div class="events__card">
-                      <div class="events__card-info">
-                        <span class="events__card-time">18:00</span>
-                        <ul class="events__card-audience-list">
-                          <li class="events__card-audience-item">Для дилеров</li>
-                        </ul>
-                      </div>
-                      <div class="events__card-subject">
-                        <h4 class="events__card-title">
-                          Он был в шоке, когда увидел ЭТО. Как не облажаться при монтаже.
-                        </h4>
-                        <div class="events__card-person-block">
-                          <div class="events__card-person">
-                            <div class="events__card-person-img-block">
-                              <img src="img/person-4.jpg" alt="person-3" class="events__card-person-img" />
-                            </div>
-                            <div class="events__card-person-info">
-                              <div class="events__card-person-name">Семён Семёнов</div>
-                              <div class="events__card-person-role">Антрепрёнер, миллионер</div>
-                            </div>
-                          </div>
-                        </div>
-                        <ul class="events__card-tags">
-                          <li class="events__card-tag">Для монтажников</li>
-                          <li class="events__card-tag">Kentatsu</li>
-                          <li class="events__card-tag">Daichi</li>
-                          <li class="events__card-tag">Midea</li>
-                          <li class="events__card-tag">Axioma</li>
-                          <li class="events__card-tag">Primera</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </section>
+          </div>
         </div>
       </div>
     </div>
 
-    <section id="filter-modal" class="modal modal-filter" data-modal="modal-filter">
+    <div class="program-card__program-question" data-block="program-question" style="display: none">
+      <div class="program-card__program-question-container container">
+        <div class="program-card__program-question-not-auth">
+          <div class="button-message">
+            <span class="button-message__text">
+              Чтобы задать вопрос, войдите в&nbsp;свою учетную запись на&nbsp;портале Daichi.business.
+            </span>
+            <a href="#" class="button-message__btn button">Войти</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка успешного завершения теста -->
+    <section id="test-modal" class="modal modal-event" data-modal="test-modal">
       <div class="modal__overlay">
-        <div class="modal__body">
+        <div class="modal-event__body modal__body">
           <form>
-            <div class="modal__top-bar">
-              <button type="button" class="modal__top-bar-btn">Сбросить</button>
-              <span class="modal__small-title">Фильтры</span>
-              <button type="button" class="modal__close-btn">
+            <div class="modal__top-bar modal-event__top-bar">
+              <span class="modal-event__top-bar-title">Поздравляем!</span>
+              <button type="button" class="modal-event__close-btn modal__close-btn">
                 <svg><use xlink:href="img/sprite.svg#close"></use></svg>
               </button>
             </div>
-            <div class="filter filter--programs-catalog">
-              <div class="filter-section filter-section--event-subject filter-section_open">
-                <div class="filter-section__title">Тематика</div>
-                <div class="filter-section-toggle">
-                  <div class="filter-section__body">
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Для проектировщиков<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для дилеров<span class="filter-section__count">212</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для монтажников<span class="filter-section__count">68</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для проектировщиков<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для проектировщиков<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для дилеров<span class="filter-section__count">212</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для монтажников<span class="filter-section__count">68</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для проектировщиков<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filter-section filter-section--event-brand filter-section_open">
-                <a class="filter-section__title filter-section__title-btn" href="#">Бренд</a>
-                <div class="filter-section-toggle">
-                  <div class="filter-section__body">
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Aurum<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Axioma<span class="filter-section__count">212</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Daichi<span class="filter-section__count">50</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Daikin<span class="filter-section__count">3</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Flaktwoods<span class="filter-section__count">20</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Furst<span class="filter-section__count">2</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Aurum<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Axioma<span class="filter-section__count">212</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Daichi<span class="filter-section__count">50</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Daikin<span class="filter-section__count">3</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Flaktwoods<span class="filter-section__count">20</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Furst<span class="filter-section__count">2</span></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filter-section filter-section--event-category filter-section_open">
-                <a class="filter-section__title filter-section__title-btn" href="#">Категория</a>
-                <div class="filter-section-toggle">
-                  <div class="filter-section__body">
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Аксессуары для вентиляции<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Аксессуары для вентиляции<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Аксессуары для кондиционирования<span class="filter-section__count">212</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Аксессуары для отопления<span class="filter-section__count">50</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Канальное вентиляционное оборудование<span class="filter-section__count">3</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Коммерческие / SKY<span class="filter-section__count">20</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Компактные вентиляционные установки<span class="filter-section__count">2</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Аксессуары для отопления<span class="filter-section__count">50</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Канальное вентиляционное оборудование<span class="filter-section__count">3</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Коммерческие / SKY<span class="filter-section__count">20</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Компактные вентиляционные установки<span class="filter-section__count">2</span></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <h1 class="modal-event__title modal__title">
+              Вы ответили правильно на&nbsp;<span class="nowrap"><span class="success">20</span>/20 вопросов</span>
+            </h1>
+            <p class="modal__desc">
+              Вы успешно завершили обучение и получаете сертификат по программе обучения VRV/VRF системы. Сертификат уже
+              выслан на вашу электронную почту, а также доступен для скачивания в любой момент в вашем личном кабинете.
+            </p>
+            <div class="modal-event__bottom">
+              <span class="modal-event__bottom-text">
+                Вы также можете скачать сертификат прямо сейчас, нажав на кнопку справа.
+              </span>
+              <a href="#" class="modal-event__bottom-btn button">Скачать сертификат</a>
             </div>
-            <div class="modal__btn-block">
-              <button class="modal__bottom-btn button">Показать 222 программы</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- модалка неуспешного завершения теста -->
+    <section id="test-modal" class="modal modal-event" data-modal="test-modal">
+      <div class="modal__overlay">
+        <div class="modal-event__body modal__body">
+          <form>
+            <div class="modal__top-bar modal-event__top-bar">
+              <span class="modal-event__top-bar-title">Попробуйте снова!</span>
+              <button type="button" class="modal-event__close-btn modal__close-btn">
+                <svg><use xlink:href="img/sprite.svg#close"></use></svg>
+              </button>
             </div>
+            <h1 class="modal-event__title modal__title">
+              Вы ответили правильно на&nbsp;<span class="nowrap"><span class="failed">10</span>/20 вопросов</span>
+            </h1>
+            <p class="modal__desc modal__desc--last">
+              К сожалению, вы не смогли набрать достаточно баллов для успешного прохождения тестирования по программе
+              обучения <strong>VRV/VRF системы</strong>. Не расстраивайтесь, вы всегда можете ещё раз изучить материалы
+              курса и&nbsp;попробовать пройти тестирование снова!
+            </p>
           </form>
         </div>
       </div>
