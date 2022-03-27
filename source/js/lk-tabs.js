@@ -1,7 +1,7 @@
 import Swiper, { FreeMode } from "swiper";
 
 //const $lk = $(".lk-education");
-const $tabs = $(".education-tabs button");
+const $tabs = $(".education-tabs .lk-education__tab");
 // const $eventsFuture = ".lk-education__events--future";
 // const $eventsPast = ".lk-education__events--past";
 // const $certificates = ".lk-education__certificates";
