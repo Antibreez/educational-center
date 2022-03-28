@@ -93,3 +93,27 @@
     border-color: $primary-dark;
   }
 }
+
+.button.subscribed {
+  background-color: $bg;
+  color: $text-minor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: $bg;
+    color: $primary;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    background-image: url("../img/check-grey.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

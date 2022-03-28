@@ -6,6 +6,7 @@ const swiper = new Swiper(".education-promo__slider", {
 
   pagination: {
     el: ".promo-swiper-pagination",
+    clickable: true,
   },
 
   autoplay: {

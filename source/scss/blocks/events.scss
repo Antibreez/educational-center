@@ -83,7 +83,8 @@
 }
 
 .events-catalog {
-  .events__card-tags {
+  .events__card-tags,
+  .events__card-title {
     width: 55%;
   }
 }
@@ -226,6 +227,12 @@
       margin-top: 70px;
       width: 100%;
     }
+
+    .events__card-title {
+      width: 100%;
+      padding-right: 40%;
+      max-width: none;
+    }
   }
 }
 
@@ -272,6 +279,10 @@
     .events__card-tags {
       order: 2;
       margin: 0 0 24px;
+    }
+
+    .events__card-title {
+      padding-right: 0;
     }
   }
 }

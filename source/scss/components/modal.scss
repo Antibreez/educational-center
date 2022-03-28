@@ -162,14 +162,29 @@
       margin: 0;
       padding: 24px;
       padding-bottom: 80px;
+      padding-top: 82px;
       overflow-y: auto;
       overflow-x: hidden;
     }
 
     .modal__top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
       padding-bottom: 24px;
+      padding-top: 24px;
+      padding-left: 24px;
+      padding-right: 24px;
+      width: 100%;
+      transform: none;
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
       border-bottom: 0;
+      background-color: #fff;
+      z-index: 10;
+    }
+
+    .modal__close-btn {
+      transform: translateY(-50%);
     }
 
     .modal__top-bar-btn {
@@ -300,13 +315,14 @@
   .modal-filter {
     .modal__top-bar {
       min-height: auto;
-      width: calc(100% + 30px);
-      transform: translate(-15px);
+      //width: calc(100% + 30px);
+      //transform: translate(-15px);
       padding-left: 15px;
+      padding-right: 64px;
     }
 
     .modal__close-btn {
-      transform: translateY(-24px);
+      //transform: translateY(-24px);
       right: 15px;
     }
 
