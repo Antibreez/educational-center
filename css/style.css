@@ -1109,6 +1109,29 @@ body.js-no-scroll {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+.brand-chip {
+  min-width: 100px;
+  min-height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #f4f4f8;
+  border-radius: 4px;
+  -webkit-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+  transition: border-color 0.2s; }
+  .brand-chip:hover {
+    cursor: pointer;
+    border-color: #e6e6ef; }
+  .brand-chip.active {
+    border-color: #2858ff; }
+
 .button-message {
   padding: 24px;
   border-radius: 5px;
@@ -1652,6 +1675,133 @@ div.up-btn {
     bottom: 20px; }
     div.up-btn.importantClass {
       display: block !important; } }
+
+.catalogs-flyers {
+  padding-bottom: 80px; }
+
+.catalogs-flyers__content {
+  padding-top: 30px; }
+
+.catalogs-flyers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.catalogs-flyers__item {
+  max-width: calc((100% - 120px) / 6);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0 0 26px; }
+  .catalogs-flyers__item:not(:nth-child(6n)) {
+    margin-right: 24px; }
+
+.catalogs-flyers__card-img-block {
+  position: relative;
+  width: 100%;
+  padding-top: 141%;
+  background-color: #f4f4f8;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 0 15px; }
+
+.catalogs-flyers__card-img-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.catalogs-flyers__card-link-download,
+.catalogs-flyers__card-link-preview {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 36px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #94a0b1;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s; }
+  .catalogs-flyers__card-link-download svg,
+  .catalogs-flyers__card-link-preview svg {
+    width: 24px;
+    height: 24px; }
+  .catalogs-flyers__card-link-download:hover,
+  .catalogs-flyers__card-link-preview:hover {
+    color: #1a1a1a; }
+
+.catalogs-flyers__card-link-preview {
+  top: 51px; }
+
+.catalogs-flyers__card-title {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0 0 5px; }
+
+.catalogs-flyers__card-size {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #94a0b1; }
+
+@media (max-width: 1150px) {
+  .catalogs-flyers__item {
+    max-width: calc((100% - 96px) / 5); }
+    .catalogs-flyers__item:nth-child(n) {
+      margin-right: 0; }
+    .catalogs-flyers__item:not(:nth-child(5n)) {
+      margin-right: 24px; } }
+
+@media (max-width: 950px) {
+  .catalogs-flyers__item {
+    max-width: calc((100% - 72px) / 4); }
+    .catalogs-flyers__item:nth-child(n) {
+      margin-right: 0; }
+    .catalogs-flyers__item:not(:nth-child(4n)) {
+      margin-right: 24px; } }
+
+@media (max-width: 800px) {
+  .catalogs-flyers__item {
+    max-width: calc((100% - 48px) / 3); }
+    .catalogs-flyers__item:nth-child(n) {
+      margin-right: 0; }
+    .catalogs-flyers__item:not(:nth-child(3n)) {
+      margin-right: 24px; } }
+
+@media (max-width: 520px) {
+  .catalogs-flyers__item {
+    max-width: calc((100% - 24px) / 2); }
+    .catalogs-flyers__item:nth-child(n) {
+      margin-right: 0; }
+    .catalogs-flyers__item:not(:nth-child(2n)) {
+      margin-right: 24px; } }
 
 .certificates {
   border: 5px;
