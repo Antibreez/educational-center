@@ -204,6 +204,13 @@
   padding-bottom: 80px;
 }
 
+.program-card__program-question-container {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 @include tablet {
   .program-card__promo {
     padding-bottom: 0;

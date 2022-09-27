@@ -54,7 +54,8 @@ div.up-btn {
   }
 }
 
-.catalog-section.programs-catalog + .education-contact-us .container {
+.catalog-section.programs-catalog + .education-contact-us .container,
+.catalog-section + .education-contact-us .container {
   padding-left: 0;
   padding-right: 0;
 }
