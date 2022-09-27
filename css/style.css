@@ -1676,7 +1676,8 @@ div.up-btn {
     div.up-btn.importantClass {
       display: block !important; } }
 
-.catalog-section.programs-catalog + .education-contact-us .container {
+.catalog-section.programs-catalog + .education-contact-us .container,
+.catalog-section + .education-contact-us .container {
   padding-left: 0;
   padding-right: 0; }
 
@@ -3293,6 +3294,10 @@ div.up-btn {
 
 .program-card__program-question {
   padding-bottom: 80px; }
+
+.program-card__program-question-container .container {
+  padding-left: 0;
+  padding-right: 0; }
 
 @media (max-width: 1024px) {
   .program-card__promo {

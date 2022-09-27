@@ -1231,28 +1231,52 @@
 
         <div class="program-card__program-question" data-block="program-question" style="display: none">
           <div class="program-card__program-question-container container">
-            <div class="education-contact-us__content">
-              <div class="education-contact-us__desc-block">
-                <h2 class="education-contact-us__title section-title">Задайте вопрос по программе!</h2>
-                <p class="education-contact-us__desc">
-                  Если у вас есть вопрос о программе, задайте его нам. Куратор курса максимально оперативно вернётся
-                  с&nbsp;ответом
-                </p>
-              </div>
-              <div class="education-contact-us__form-block">
-                <form action="">
-                  <div class="education-contact-us__form-inner">
-                    <div class="field">
-                      <span class="wrap-field-input">
-                        <label for="">Ваш вопрос</label>
-                        <textarea class="field-input-textarea" placeholder="Начните печатать ваш вопрос..."></textarea>
-                      </span>
-                    </div>
-                    <div class="education-contact-us__bottom">
-                      <button class="education-contact-us__send button">Отправить</button>
-                    </div>
+            <div class="education-contact-us">
+              <div class="education-contact-us__container container">
+                <div class="education-contact-us__content">
+                  <div class="education-contact-us__desc-block">
+                    <h2 class="education-contact-us__title section-title">Свяжитесь с&nbsp;нами!</h2>
+                    <p class="education-contact-us__desc">
+                      Если у вас есть вопросы о программах обучения или вы не знаете, какой курс подойдёт вам, оставьте
+                      свой номер&nbsp;— мы ответим на все ваши вопросы
+                    </p>
                   </div>
-                </form>
+                  <div class="education-contact-us__form-block">
+                    <form action="">
+                      <div class="education-contact-us__form-inner">
+                        <div class="field field_error">
+                          <label for="">Имя*</label>
+                          <span class="wrap-field-input">
+                            <input class="field-input" type="text" placeholder="Иван Иванов" required />
+                            <span class="field-tips_error"> Поле не должно быть пустым </span>
+                          </span>
+                        </div>
+                        <div class="field field_error">
+                          <label for="">Email*</label>
+                          <span class="wrap-field-input">
+                            <input class="field-input" type="email" placeholder="user@daichi.ru" required />
+                            <span class="field-tips_error"> Введите корректный email </span>
+                          </span>
+                        </div>
+                        <div class="field field_error">
+                          <label for="">Номер телефона*</label>
+                          <span class="wrap-field-input">
+                            <input class="field-input" type="text" placeholder="+7 (000) 000-00-00" required />
+                            <span class="field-tips_error"> Введите номер телефона </span>
+                          </span>
+                        </div>
+                        <div class="education-contact-us__bottom">
+                          <p class="education-contact-us__agreement">
+                            Нажимая на кнопку, я соглашаюсь на
+                            <a href="#">обработку персональных данных</a> и
+                            <a href="#">условия работы на портале</a>
+                          </p>
+                          <button class="education-contact-us__send button">Отправить</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
