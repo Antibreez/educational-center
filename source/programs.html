@@ -36,6 +36,30 @@
     <title>Учебный центр</title>
   </head>
   <body>
+    <style>
+      .content.is--daichi-points {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: none;
+      }
+
+      .content.is--daichi-points .wrap-breadcrumbs {
+        max-width: 1440px;
+        width: 100%;
+        padding: 0 40px;
+        margin: 10px auto 30px auto;
+      }
+
+      .content.is--daichi-points h1 {
+        max-width: 1440px;
+        width: 100%;
+        padding: 0 40px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
     <!-- !!ВЗЯТО ИЗ DAICHI.BUISNESS. ПЕРЕНОСИТЬ НЕ НУЖНО!!! -->
     <header class="wrap-header">
       <div class="wrap-header-top">
@@ -541,65 +565,62 @@
       </div>
     </div>
 
-    <div class="title-block">
-      <div class="title-block__container container">
-        <div class="wrap-breadcrumbs">
-          <ul class="breadcrumbs">
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Программы обучения</a></li>
-          </ul>
-          <div class="breadcrumbs-mobile"><a class="breadcrumbs-mobile__link" href="#">Назад</a></div>
-        </div>
-        <h1>Программы обучения</h1>
+    <div class="content">
+      <div class="wrap-breadcrumbs">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Программы обучения</a></li>
+        </ul>
+        <div class="breadcrumbs-mobile"><a class="breadcrumbs-mobile__link" href="#">Назад</a></div>
       </div>
-    </div>
 
-    <div class="programs-catalog__popular">
-      <div class="programs-catalog__popular-container">
-        <div class="categories">
-          <div class="categories__item">
-            <h3 class="categories__title">Популярные курсы:</h3>
-            <div class="categories__list-wrap swiper">
-              <ul class="categories__type-list swiper-wrapper">
-                <li class="categories__type swiper-slide">
-                  <div class="categories__type-btn">Для проектировщиков</div>
-                </li>
-                <li class="categories__type swiper-slide">
-                  <div class="categories__type-btn active">Для дилеров</div>
-                </li>
-                <li class="categories__type swiper-slide">
-                  <div class="categories__type-btn">Для монтажников</div>
-                </li>
-                <li class="categories__type swiper-slide">
-                  <div class="categories__type-btn">Kentatsu</div>
-                </li>
-                <li class="categories__type swiper-slide">
-                  <div class="categories__type-btn">Daichi</div>
-                </li>
-                <li class="categories__type swiper-slide">
-                  <div class="categories__type-btn">Облачный кондиционер</div>
-                </li>
-              </ul>
+      <div class="section-main">
+        <h1>Программы обучения</h1>
+
+        <div class="programs-catalog__popular">
+          <div class="programs-catalog__popular-container">
+            <div class="categories">
+              <div class="categories__item">
+                <h3 class="categories__title">Популярные курсы:</h3>
+                <div class="categories__list-wrap swiper">
+                  <ul class="categories__type-list swiper-wrapper">
+                    <li class="categories__type swiper-slide">
+                      <div class="categories__type-btn">Для проектировщиков</div>
+                    </li>
+                    <li class="categories__type swiper-slide">
+                      <div class="categories__type-btn active">Для дилеров</div>
+                    </li>
+                    <li class="categories__type swiper-slide">
+                      <div class="categories__type-btn">Для монтажников</div>
+                    </li>
+                    <li class="categories__type swiper-slide">
+                      <div class="categories__type-btn">Kentatsu</div>
+                    </li>
+                    <li class="categories__type swiper-slide">
+                      <div class="categories__type-btn">Daichi</div>
+                    </li>
+                    <li class="categories__type swiper-slide">
+                      <div class="categories__type-btn">Облачный кондиционер</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="programs-catalog">
-      <div class="programs-catalog__container container">
-        <div class="catalog-section">
+        <div class="catalog-section programs-catalog">
           <aside class="catalog-section__aside">
             <div class="wrap-filter">
               <!-- <div class="filter-mobile-header">
-                <div class="filter-mobile-header__title">Фильры</div>
-                <div class="filter-mobile-header__close">
-                  <a class="filter-mobile-header__link js--filter-mobile-close" href="#">
-                    <svg class="ico-svg">
-                      <use xlink:href="#ico-close"></use></svg
-                  ></a>
-                </div>
-              </div> -->
+                    <div class="filter-mobile-header__title">Фильры</div>
+                    <div class="filter-mobile-header__close">
+                      <a class="filter-mobile-header__link js--filter-mobile-close" href="#">
+                        <svg class="ico-svg">
+                          <use xlink:href="#ico-close"></use></svg
+                      ></a>
+                    </div>
+                  </div> -->
               <div class="filter filter--programs-catalog">
                 <div class="filter-section filter-section--event-subject filter-section_open">
                   <a class="filter-section__title filter-section__title-btn" href="#">Тематика</a>
@@ -1003,285 +1024,289 @@
             </div>
           </section>
         </div>
-      </div>
-    </div>
 
-    <div class="education-contact-us">
-      <div class="education-contact-us__container container">
-        <div class="education-contact-us__content">
-          <div class="education-contact-us__desc-block">
-            <h2 class="education-contact-us__title section-title">Свяжитесь с&nbsp;нами!</h2>
-            <p class="education-contact-us__desc">
-              Если у вас есть вопросы о программах обучения или вы не знаете, какой курс подойдёт вам, оставьте свой
-              номер&nbsp;— мы ответим на все ваши вопросы
-            </p>
-          </div>
-          <div class="education-contact-us__form-block">
-            <form action="">
-              <div class="education-contact-us__form-inner">
-                <div class="field field_error">
-                  <label for="">Имя*</label>
-                  <span class="wrap-field-input">
-                    <input class="field-input" type="text" placeholder="Иван Иванов" required />
-                    <span class="field-tips_error"> Поле не должно быть пустым </span>
-                  </span>
-                </div>
-                <div class="field field_error">
-                  <label for="">Email*</label>
-                  <span class="wrap-field-input">
-                    <input class="field-input" type="email" placeholder="user@daichi.ru" required />
-                    <span class="field-tips_error"> Введите корректный email </span>
-                  </span>
-                </div>
-                <div class="field field_error">
-                  <label for="">Номер телефона*</label>
-                  <span class="wrap-field-input">
-                    <input class="field-input" type="text" placeholder="+7 (000) 000-00-00" required />
-                    <span class="field-tips_error"> Введите номер телефона </span>
-                  </span>
-                </div>
-                <div class="education-contact-us__bottom">
-                  <p class="education-contact-us__agreement">
-                    Нажимая на кнопку, я соглашаюсь на
-                    <a href="#">обработку персональных данных</a> и
-                    <a href="#">условия работы на портале</a>
-                  </p>
-                  <button class="education-contact-us__send button">Отправить</button>
-                </div>
+        <div class="education-contact-us">
+          <div class="education-contact-us__container container">
+            <div class="education-contact-us__content">
+              <div class="education-contact-us__desc-block">
+                <h2 class="education-contact-us__title section-title">Свяжитесь с&nbsp;нами!</h2>
+                <p class="education-contact-us__desc">
+                  Если у вас есть вопросы о программах обучения или вы не знаете, какой курс подойдёт вам, оставьте свой
+                  номер&nbsp;— мы ответим на все ваши вопросы
+                </p>
               </div>
-            </form>
+              <div class="education-contact-us__form-block">
+                <form action="">
+                  <div class="education-contact-us__form-inner">
+                    <div class="field field_error">
+                      <label for="">Имя*</label>
+                      <span class="wrap-field-input">
+                        <input class="field-input" type="text" placeholder="Иван Иванов" required />
+                        <span class="field-tips_error"> Поле не должно быть пустым </span>
+                      </span>
+                    </div>
+                    <div class="field field_error">
+                      <label for="">Email*</label>
+                      <span class="wrap-field-input">
+                        <input class="field-input" type="email" placeholder="user@daichi.ru" required />
+                        <span class="field-tips_error"> Введите корректный email </span>
+                      </span>
+                    </div>
+                    <div class="field field_error">
+                      <label for="">Номер телефона*</label>
+                      <span class="wrap-field-input">
+                        <input class="field-input" type="text" placeholder="+7 (000) 000-00-00" required />
+                        <span class="field-tips_error"> Введите номер телефона </span>
+                      </span>
+                    </div>
+                    <div class="education-contact-us__bottom">
+                      <p class="education-contact-us__agreement">
+                        Нажимая на кнопку, я соглашаюсь на
+                        <a href="#">обработку персональных данных</a> и
+                        <a href="#">условия работы на портале</a>
+                      </p>
+                      <button class="education-contact-us__send button">Отправить</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
+
+        <section id="filter-modal" class="modal modal-filter" data-modal="modal-filter">
+          <div class="modal__overlay">
+            <div class="modal__body">
+              <form>
+                <div class="modal__top-bar">
+                  <button type="button" class="modal__top-bar-btn">Сбросить</button>
+                  <span class="modal__small-title">Фильтры</span>
+                  <button type="button" class="modal__close-btn">
+                    <svg><use xlink:href="img/sprite.svg#close"></use></svg>
+                  </button>
+                </div>
+                <div class="filter filter--programs-catalog">
+                  <div class="filter-section filter-section--event-subject filter-section_open">
+                    <div class="filter-section__title">Тематика</div>
+                    <div class="filter-section-toggle">
+                      <div class="filter-section__body">
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Для проектировщиков<span class="filter-section__count">168</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Для дилеров<span class="filter-section__count">212</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Для монтажников<span class="filter-section__count">68</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Для проектировщиков<span class="filter-section__count">168</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Для проектировщиков<span class="filter-section__count">168</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Для дилеров<span class="filter-section__count">212</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Для монтажников<span class="filter-section__count">68</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Для проектировщиков<span class="filter-section__count">168</span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-section filter-section--event-brand filter-section_open">
+                    <a class="filter-section__title filter-section__title-btn" href="#">Бренд</a>
+                    <div class="filter-section-toggle">
+                      <div class="filter-section__body">
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Aurum<span class="filter-section__count">168</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Axioma<span class="filter-section__count">212</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Daichi<span class="filter-section__count">50</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Daikin<span class="filter-section__count">3</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Flaktwoods<span class="filter-section__count">20</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Furst<span class="filter-section__count">2</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Aurum<span class="filter-section__count">168</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Axioma<span class="filter-section__count">212</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Daichi<span class="filter-section__count">50</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Daikin<span class="filter-section__count">3</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Flaktwoods<span class="filter-section__count">20</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Furst<span class="filter-section__count">2</span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-section filter-section--event-category filter-section_open">
+                    <a class="filter-section__title filter-section__title-btn" href="#">Категория</a>
+                    <div class="filter-section-toggle">
+                      <div class="filter-section__body">
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Аксессуары для вентиляции<span class="filter-section__count">168</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" checked />
+                            <span>Аксессуары для вентиляции<span class="filter-section__count">168</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Аксессуары для кондиционирования<span class="filter-section__count">212</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Аксессуары для отопления<span class="filter-section__count">50</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span
+                              >Канальное вентиляционное оборудование<span class="filter-section__count">3</span></span
+                            >
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Коммерческие / SKY<span class="filter-section__count">20</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Компактные вентиляционные установки<span class="filter-section__count">2</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Аксессуары для отопления<span class="filter-section__count">50</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span
+                              >Канальное вентиляционное оборудование<span class="filter-section__count">3</span></span
+                            >
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Коммерческие / SKY<span class="filter-section__count">20</span></span>
+                          </label>
+                        </div>
+                        <div class="field">
+                          <label class="field-input-radio">
+                            <input type="checkbox" />
+                            <span>Компактные вентиляционные установки<span class="filter-section__count">2</span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal__btn-block">
+                  <button class="modal__bottom-btn button">Показать 222 программы</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-
-    <section id="filter-modal" class="modal modal-filter" data-modal="modal-filter">
-      <div class="modal__overlay">
-        <div class="modal__body">
-          <form>
-            <div class="modal__top-bar">
-              <button type="button" class="modal__top-bar-btn">Сбросить</button>
-              <span class="modal__small-title">Фильтры</span>
-              <button type="button" class="modal__close-btn">
-                <svg><use xlink:href="img/sprite.svg#close"></use></svg>
-              </button>
-            </div>
-            <div class="filter filter--programs-catalog">
-              <div class="filter-section filter-section--event-subject filter-section_open">
-                <div class="filter-section__title">Тематика</div>
-                <div class="filter-section-toggle">
-                  <div class="filter-section__body">
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Для проектировщиков<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для дилеров<span class="filter-section__count">212</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для монтажников<span class="filter-section__count">68</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для проектировщиков<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для проектировщиков<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для дилеров<span class="filter-section__count">212</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для монтажников<span class="filter-section__count">68</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Для проектировщиков<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filter-section filter-section--event-brand filter-section_open">
-                <a class="filter-section__title filter-section__title-btn" href="#">Бренд</a>
-                <div class="filter-section-toggle">
-                  <div class="filter-section__body">
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Aurum<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Axioma<span class="filter-section__count">212</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Daichi<span class="filter-section__count">50</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Daikin<span class="filter-section__count">3</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Flaktwoods<span class="filter-section__count">20</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Furst<span class="filter-section__count">2</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Aurum<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Axioma<span class="filter-section__count">212</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Daichi<span class="filter-section__count">50</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Daikin<span class="filter-section__count">3</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Flaktwoods<span class="filter-section__count">20</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Furst<span class="filter-section__count">2</span></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filter-section filter-section--event-category filter-section_open">
-                <a class="filter-section__title filter-section__title-btn" href="#">Категория</a>
-                <div class="filter-section-toggle">
-                  <div class="filter-section__body">
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Аксессуары для вентиляции<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" checked />
-                        <span>Аксессуары для вентиляции<span class="filter-section__count">168</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Аксессуары для кондиционирования<span class="filter-section__count">212</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Аксессуары для отопления<span class="filter-section__count">50</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Канальное вентиляционное оборудование<span class="filter-section__count">3</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Коммерческие / SKY<span class="filter-section__count">20</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Компактные вентиляционные установки<span class="filter-section__count">2</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Аксессуары для отопления<span class="filter-section__count">50</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Канальное вентиляционное оборудование<span class="filter-section__count">3</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Коммерческие / SKY<span class="filter-section__count">20</span></span>
-                      </label>
-                    </div>
-                    <div class="field">
-                      <label class="field-input-radio">
-                        <input type="checkbox" />
-                        <span>Компактные вентиляционные установки<span class="filter-section__count">2</span></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal__btn-block">
-              <button class="modal__bottom-btn button">Показать 222 программы</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
 
     <!-- !!ВЗЯТО ИЗ DAICHI.BUISNESS. ПЕРЕНОСИТЬ НЕ НУЖНО!!! -->
     <div class="up-btn">

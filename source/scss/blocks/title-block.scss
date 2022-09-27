@@ -14,6 +14,10 @@
   width: 266px;
 }
 
+.title-block__container ~ h1 {
+  display: inline-block;
+}
+
 @include tablet {
   .title-block__title-btn {
     flex-direction: column;

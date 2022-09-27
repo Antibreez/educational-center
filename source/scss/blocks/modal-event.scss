@@ -66,9 +66,10 @@
 .modal-event__bottom-text {
   @include font(16px, 24px, 400, $text-minor);
   padding-right: 24px;
+  flex-shrink: 1;
 
   a {
-    word-wrap: break-word;
+    word-break: break-all;
   }
 }
 
@@ -77,6 +78,7 @@
   padding-left: 32px;
   padding-right: 32px;
   align-self: flex-start;
+  margin-left: auto;
 }
 
 .modal-event__subscribed {
